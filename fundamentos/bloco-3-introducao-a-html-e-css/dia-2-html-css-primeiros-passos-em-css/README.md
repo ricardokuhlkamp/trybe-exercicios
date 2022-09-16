@@ -1,0 +1,1 @@
+/home/ricardo/Documentos/trybe/trybe-exercicios/fundamentos/bloco-3-introducao-a-html-e-css/dia-2-html-css-primeiros-passos-em-css
