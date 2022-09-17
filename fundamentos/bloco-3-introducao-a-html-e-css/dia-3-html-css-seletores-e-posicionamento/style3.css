@@ -2,6 +2,10 @@ h1, p {
     text-align: center;
 }
 
-ol {
-    display: block;
+li:hover{
+    background-color: aquamarine;
+}
+
+li:active{
+    font-family: monospace;
 }
