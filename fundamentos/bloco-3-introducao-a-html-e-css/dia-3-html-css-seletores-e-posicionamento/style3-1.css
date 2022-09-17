@@ -1,0 +1,47 @@
+div:hover {
+    border: 2px solid red;
+}
+
+.div-cor1 {
+    background-color: grey;
+}
+.div-cor2 {
+    background-color: aqua;
+}
+.div-cor3 {
+    background-color: blue;
+    height: 80px;
+}
+.div-cor4 {
+    background-color: #264653;
+}
+.div-cor5 {
+    background-color: #fcf6bd;
+}
+
+.div-cor1 h3 {
+    font-family: Times;
+    font-style: italic;
+}
+
+.div-cor2 h3 {
+    font-family: Courier;
+    font-weight: bolder;
+}
+
+.div-cor3 h3 {
+    font-family: monospace;
+    color: azure;
+    font-style: italic;
+}
+
+.div-cor4 h3 {
+    font-family: Georgia;
+    color: aqua;
+}
+
+.div-cor5 h3 {
+    font-family: Arial;
+    color: blue;
+    font-style: italic;
+}
