@@ -1,3 +1,15 @@
 table, th, td {
     border:1px solid black;
-  }
+}
+
+table {
+  float: left;
+}
+
+.info-gerais {
+  margin: 10px;
+  position: absolute;
+}
+.tabela-mais-info-gerais {
+  position: relative;
+}
