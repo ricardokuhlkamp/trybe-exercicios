@@ -7,9 +7,13 @@ table {
 }
 
 .info-gerais {
-  margin: 10px;
-  position: absolute;
+  
+  
 }
 .tabela-mais-info-gerais {
   position: relative;
+}
+
+section {
+  position: relative
 }
