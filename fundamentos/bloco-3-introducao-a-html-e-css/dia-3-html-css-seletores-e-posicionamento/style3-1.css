@@ -17,3 +17,28 @@ div:hover {
 .div-cor5 {
     background-color: #fcf6bd;
 }
+
+.div-cor1 h3 {
+    font-family: Times;
+    font-style: italic;
+}
+
+.div-cor2 h3 {
+    font-family: Courier;
+    font-weight: bolder;
+}
+
+.div-cor3 h3 {
+    font-family: monospace;
+    color: azure;
+}
+
+.div-cor4 h3 {
+    font-family: Georgia;
+    color: aqua;
+}
+
+.div-cor5 h3 {
+    font-family: Arial;
+    color: blue;
+}
