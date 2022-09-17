@@ -5,3 +5,7 @@
 .par-cor-font {
     color: green;
 }
+
+.impar-txt-maiusculo {
+    text-transform: uppercase;
+}
