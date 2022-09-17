@@ -32,6 +32,7 @@ div:hover {
 .div-cor3 h3 {
     font-family: monospace;
     color: azure;
+    font-style: italic;
 }
 
 .div-cor4 h3 {
@@ -42,4 +43,5 @@ div:hover {
 .div-cor5 h3 {
     font-family: Arial;
     color: blue;
+    font-style: italic;
 }
