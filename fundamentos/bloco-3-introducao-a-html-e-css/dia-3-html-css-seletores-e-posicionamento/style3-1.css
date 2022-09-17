@@ -1,0 +1,19 @@
+div:hover {
+    border: 2px solid red;
+}
+
+.div-cor1 {
+    background-color: grey;
+}
+.div-cor2 {
+    background-color: aqua;
+}
+.div-cor3 {
+    background-color: blue;
+}
+.div-cor4 {
+    background-color: #264653;
+}
+.div-cor5 {
+    background-color: #fcf6bd;
+}
