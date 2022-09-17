@@ -17,3 +17,8 @@ table {
 section {
   position: relative
 }
+
+.imagens {
+  width: 250px;
+  float: left;
+}
