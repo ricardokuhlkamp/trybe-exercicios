@@ -26,3 +26,36 @@ li {
 li em {
     font-weight: bolder;
 }
+
+.font-blue {
+    color: blue;
+}
+
+.cor-fundo-rosa {
+    background-color: pink;
+}
+
+a#stack:hover{
+    font-weight: bolder;
+    color: hsl(27,90%,55%);
+}
+a#w3schools:hover{
+    font-weight: bolder;
+    color: #04AA6D;
+}
+
+a#mdn:hover{
+    font-weight: bolder;
+    color: #0069c2;
+}
+
+a#devdocs:hover{
+    font-weight: bolder;
+    color: yellow;
+}
+
+a#betrybe:hover{
+    font-weight: bolder;
+    color: rgb(11, 167, 11);
+}
+
