@@ -1,3 +1,7 @@
+body {
+  margin: 3%;
+}
+
 table, th, td {
     border:1px solid black;
 }
@@ -6,19 +10,54 @@ table {
   float: left;
 }
 
-.info-gerais {
-  
-  
-}
 .tabela-mais-info-gerais {
   position: relative;
 }
 
 section {
-  position: relative
+  
+  border: 2px solid red;
 }
 
 .imagens {
-  width: 250px;
+  height: 120px;
+  
+  border: 2px solid blue;
+  
+}
+
+aside {
+  
+  background-color: lightgray;
+  
+  border: 2px solid red;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.container-imagem {
+  border: 2px solid green;
   float: left;
+}
+
+.container-paragrafos {
+  border: 5px solid purple;
+  margin-bottom: 50px;
+  
+}
+
+p {
+  margin-left: 200px;
+  margin-right: 20px;
+}
+
+#lista-navegacao {
+  text-align: center;
+}
+
+ul {
+  list-style-position: inside;
+  margin-left: 165px;
 }
