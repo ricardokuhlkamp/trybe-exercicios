@@ -1,5 +1,6 @@
 body {
   margin: 3%;
+  background-color: caf0f8ec;
 }
 
 table, th, td {
@@ -14,47 +15,38 @@ table {
   position: relative;
 }
 
-section {
-  
-  border: 2px solid red;
+section {  
+  min-height: 160px;
 }
 
 .imagens {
-  height: 120px;
-  
-  border: 2px solid blue;
-  
+  height: 120px; 
 }
 
-aside {
-  
-  background-color: lightgray;
-  
-  border: 2px solid red;
+aside {  
+  background-color: lightgray;  
 }
 
 h1, h2, h3 {
   text-align: center;
 }
 
-.container-imagem {
-  border: 2px solid green;
+.container-imagem {  
   float: left;
 }
 
-.container-paragrafos {
-  border: 5px solid purple;
-  margin-bottom: 50px;
-  
+.container-paragrafos { 
+  margin-bottom: 50px;  
 }
 
 p {
   margin-left: 200px;
   margin-right: 20px;
+  text-align: justify;
 }
 
 #lista-navegacao {
-  text-align: center;
+  margin-left: 165px;
 }
 
 ul {
