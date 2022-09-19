@@ -42,12 +42,16 @@ p {
 }
 
 #lista-navegacao {
-  margin-left: 165px;
+  margin-left: 165px;  
 }
 
 ul {
   list-style-position: inside;
   margin-left: 165px;
+}
+
+li {
+  display: inline;
 }
 
 nav {
