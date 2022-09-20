@@ -1,0 +1,68 @@
+body {
+  
+  background-color: caf0f8ec;
+}
+
+table, th, td {
+    border:1px solid black;
+}
+
+table {
+  float: left;
+}
+
+.tabela-mais-info-gerais {
+  position: relative;
+}
+
+section {  
+  min-height: 160px;
+}
+
+.imagens {
+  height: 120px; 
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.container-imagem {  
+  float: left;
+}
+
+.container-paragrafos { 
+  margin-bottom: 50px;  
+}
+
+p {
+  margin-left: 200px;
+  margin-right: 20px;
+  text-align: justify;
+}
+
+#lista-navegacao {
+  margin-left: 165px;  
+}
+
+ul {
+  list-style-position: inside;
+  margin-left: 165px;
+}
+
+li {
+  display: inline;
+}
+
+nav {
+  background-color: lightgray;
+}
+
+.evidencia {
+  font-weight: bold;
+}
+
+footer {
+  background-color: lightgray;
+  height:100px; 
+}
