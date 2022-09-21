@@ -12,7 +12,7 @@ Exemplo: bishop (bispo) -> diagonals (diagonais)
 const pecaXadrez = "TORRE";
 switch (pecaXadrez.toLowerCase()) {
   case "peão":
-    console.log("uam a duas casa no início para frente, após somente uma casa para frente, e toma peças uma casa à direita ou à esquerda e sempre para frente");
+    console.log("uma a duas casa no início para frente, após somente uma casa para frente, e toma peças uma casa à direita ou à esquerda e sempre para frente");
     break;
   case "cavalo": 
     console.log("movimento em L contendo 3 casas");
