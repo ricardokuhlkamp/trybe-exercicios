@@ -3,6 +3,9 @@
 let resultado = "";
 
 for (let index = 0; index < 5; index+=1) {
-  resultado+="*";
+  resultado="*";
+  for (let index2 = 0; index2 < 5; index2+=1) {
+    resultado+="*"; 
+  }
   console.log(resultado);
 }
