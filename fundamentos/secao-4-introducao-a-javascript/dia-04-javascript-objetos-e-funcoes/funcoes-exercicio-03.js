@@ -1,12 +1,12 @@
 //Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 //Array de teste:
-let lista = [2, 3, 6, 7, 10, 1];
+let lista = [2, 4, 6, 7, 10, 0, -3];
 
 function menorIndice(lista) {
-  let maiorNumero = lista[0];
+  let menorNumero = lista[0];
   let indice = 0;
   for (let index = 0; index < lista.length; index+=1) {
-    if (maiorNumero < lista[index]) {
+    if (menorNumero > lista[index]) {
       indice = index;
     } 
   }
