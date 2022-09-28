@@ -29,3 +29,10 @@ function textoTitulo() {
   titulo.innerHTML = "Sucesso!";
 }
 textoTitulo();
+
+//5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.
+
+function paragrafoUmMaiusculo() {
+  document.getElementsByTagName("p")[0].style.textTransform = "uppercase";
+}
+paragrafoUmMaiusculo();
