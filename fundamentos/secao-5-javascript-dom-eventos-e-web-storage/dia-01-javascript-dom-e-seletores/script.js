@@ -36,3 +36,13 @@ function paragrafoUmMaiusculo() {
   document.getElementsByTagName("p")[0].style.textTransform = "uppercase";
 }
 paragrafoUmMaiusculo();
+
+//6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
+
+function consoleLog() {
+  let array = document.getElementsByTagName("p");
+  for (let index = 0; index < array.length; index++) {
+    console.log(document.getElementsByTagName("p")[index].innerHTML);    
+  }
+}
+consoleLog();
