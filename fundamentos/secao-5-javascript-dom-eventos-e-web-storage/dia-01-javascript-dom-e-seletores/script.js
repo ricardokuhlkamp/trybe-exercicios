@@ -8,3 +8,8 @@ descricao();
 
 //2. Crie e execute uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
 
+function corQuadrado() {
+  let quadrado = document.getElementsByClassName("main-content")[0];
+  quadrado.style.backgroundColor = "rgb(76,164,109)"
+}
+corQuadrado();
