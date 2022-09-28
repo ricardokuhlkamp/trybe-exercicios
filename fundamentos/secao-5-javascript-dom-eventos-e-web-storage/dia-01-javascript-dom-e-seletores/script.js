@@ -21,3 +21,11 @@ function corQuadradoCentral() {
   quadrado.style.backgroundColor = "white"
 }
 corQuadradoCentral();
+
+//4. Crie e execute uma função que corrija o texto da tag <h1>.
+
+function textoTitulo() {
+  let titulo = document.getElementsByClassName("title")[0];
+  titulo.innerHTML = "Sucesso!";
+}
+textoTitulo();
