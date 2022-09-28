@@ -13,3 +13,11 @@ function corQuadrado() {
   quadrado.style.backgroundColor = "rgb(76,164,109)"
 }
 corQuadrado();
+
+//3. Crie e execute uma função que mude a cor do quadrado vermelho para branco.
+
+function corQuadradoCentral() {
+  let quadrado = document.getElementsByClassName("center-content")[0];
+  quadrado.style.backgroundColor = "white"
+}
+corQuadradoCentral();
