@@ -110,7 +110,14 @@
         const elementTagH3 = document.createElement('h3');
         elementTagH3.innerText = "Texto " + index;
         elementTagMain.appendChild(elementTagH3);
+        //Adicione a classe description nas 3 tags h3 criadas;
+        elementTagH3.className = "description";
       };
+      //Adicione a classe title na tag h1 criada;
+      elementTagH1.className = "title";
+
+      //Remova a section criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+      elementTagMain.removeChild(elementTagSection2);
 
 
     </script>
