@@ -2,7 +2,7 @@
 
 function descricao() {
   let paragrafo = document.getElementsByTagName("p")[1];
-  paragrafo.innerHTML = "Muito Sucesso! E ganhar mais de 5 mil reias mensai!";
+  paragrafo.innerText = "Muito Sucesso! E ganhar mais de 5 mil reias mensai!";
 }
 descricao();
 
@@ -42,7 +42,7 @@ paragrafoUmMaiusculo();
 function consoleLog() {
   let array = document.getElementsByTagName("p");
   for (let index = 0; index < array.length; index++) {
-    console.log(document.getElementsByTagName("p")[index].innerHTML);    
+    console.log(document.getElementsByTagName("p")[index].innerText);    
   }
 }
 consoleLog();
