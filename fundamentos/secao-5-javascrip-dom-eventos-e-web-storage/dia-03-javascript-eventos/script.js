@@ -129,7 +129,6 @@ function sextou(sextaArray) {
       }
     }
   })
-  console.log(getAllFriday)
 };
 let sextasDezembro = [4, 11, 18, 25];
 sextou(sextasDezembro);
@@ -137,3 +136,59 @@ sextou(sextasDezembro);
 //-----------------------------------------------------------
 //Parte 6
 
+//Implemente duas funções que criem um efeito de “zoom”.
+//-Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+//-Dica - Propriedade: event.target.
+
+function mouseOver() {
+  let allDaysMonth = document.querySelector('#days');  
+  allDaysMonth.addEventListener('mouseover', function(event){
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  });  
+};
+mouseOver();
+
+function mouseOut() {
+  let allDaysMonth = document.querySelector('#days');  
+  allDaysMonth.addEventListener('mouseout', function(event){
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  }); 
+};
+mouseOut();
+
+//-----------------------------------------------------------
+//Parte 7
+
+//Implemente uma função que adicione uma tarefa personalizada ao calendário.
+//-A função deve receber como parâmetro a string com o nome da tarefa (ex: “cozinhar”) e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+//-O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
+function criarTarefas(parametro) {
+  let span = document.createElement('span');
+  span.innerText = parametro;
+  let getDivMyTasks = document.querySelector('.my-tasks');
+  getDivMyTasks.appendChild(span);
+};
+let tarefa = 'cozinhar';
+criarTarefas(tarefa);
+
+//-----------------------------------------------------------
+//Parte 8
+
+//Implemente uma função que adicione uma legenda com cor para a tarefa.
+//-Essa função deverá receber como parâmetro uma string (‘cor’) e criar dinamicamente um elemento de tag <div> com a classe task
+//O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada
+//O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks"
+
+function legendaCorTarefa(color) {
+  let newDiv = document.createElement('div');
+  let getDivTask = document.querySelector('.my-tasks');
+  getDivTask.appendChild(newDiv);
+  newDiv.className = 'task';
+  newDiv.style.backgroundColor = color;
+}
+legendaCorTarefa("green");
+
+//-----------------------------------------------------------
