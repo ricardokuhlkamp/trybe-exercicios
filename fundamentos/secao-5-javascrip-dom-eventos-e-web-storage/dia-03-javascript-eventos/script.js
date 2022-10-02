@@ -61,7 +61,7 @@ function criaBtnFeriados(parametro) {
   //let divBtnContainer = document.querySelector('.buttons-container');
   divBtnContainer.appendChild(novoBotao);
   novoBotao.innerHTML = parametro;
-  
+
 }
 criaBtnFeriados('Feriados');
 
@@ -78,13 +78,13 @@ function alteraCorFeriados() {
   let backgroundColor = 'rgb(238,238,238)';
   let setColor = 'white';
 
-  getBtnHoliday.addEventListener('click', function() {
+  getBtnHoliday.addEventListener('click', function () {
     for (let index = 0; index < getAllHoliday.length; index += 1) {
       if (getAllHoliday[index].style.backgroundColor === setColor) {
         getAllHoliday[index].style.backgroundColor = backgroundColor;
       } else {
-        getAllHoliday[index].style.backgroundColor = setColor;        
-      }      
+        getAllHoliday[index].style.backgroundColor = setColor;
+      }
     }
   })
 }
@@ -99,7 +99,7 @@ alteraCorFeriados();
 //-Adicione a esse botão o ID "btn-friday";
 //-Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
 
-function criaBtnSexta (parametro) {
+function criaBtnSexta(parametro) {
   let btnSexta = document.createElement('button');
   btnSexta.innerHTML = parametro;
   btnSexta.setAttribute('id', 'btn-friday');
@@ -114,14 +114,14 @@ criaBtnSexta("Sexta-Feira");
 //-É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial exibindo os dias.
 
 function sextou(sextaArray) {
-  
+
   let getBtnSexta = document.querySelector("#btn-friday");
   let getAllFriday = document.querySelectorAll('.friday');
   let newText = 'Sextou!';
 
-  getBtnSexta.addEventListener('click', function(){
+  getBtnSexta.addEventListener('click', function () {
     for (let index = 0; index < getAllFriday.length; index++) {
-      
+
       if (getAllFriday[index].innerText !== newText) {
         getAllFriday[index].innerText = newText;
       } else {
@@ -141,20 +141,20 @@ sextou(sextasDezembro);
 //-Dica - Propriedade: event.target.
 
 function mouseOver() {
-  let allDaysMonth = document.querySelector('#days');  
-  allDaysMonth.addEventListener('mouseover', function(event){
+  let allDaysMonth = document.querySelector('#days');
+  allDaysMonth.addEventListener('mouseover', function (event) {
     event.target.style.fontSize = '30px';
     event.target.style.fontWeight = '600';
-  });  
+  });
 };
 mouseOver();
 
 function mouseOut() {
-  let allDaysMonth = document.querySelector('#days');  
-  allDaysMonth.addEventListener('mouseout', function(event){
+  let allDaysMonth = document.querySelector('#days');
+  allDaysMonth.addEventListener('mouseout', function (event) {
     event.target.style.fontSize = '20px';
     event.target.style.fontWeight = '200';
-  }); 
+  });
 };
 mouseOut();
 
@@ -192,3 +192,92 @@ function legendaCorTarefa(color) {
 legendaCorTarefa("green");
 
 //-----------------------------------------------------------
+//Parte 9
+
+//Implemente uma função que selecione uma tarefa.
+//-Adicione um evento que ao clicar no elemento com a tag <div> referente à cor da sua tarefa, atribua a esse elemento a classe task selected, ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada
+//-Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task, ou seja, essa tarefa está deixando de ser uma tarefa selecionada.
+
+function alterarClase() {
+  let classeSelecionada = document.getElementsByClassName('task selected');
+  let task = document.querySelector('.task');
+  task.addEventListener('click', function (event) {
+    //console.log("antes: ", classeSelecionada)
+    //console.log("antes length: ", classeSelecionada.length)
+    if (classeSelecionada.length === 0) {
+      event.target.className = 'task selected';
+      //console.log("01: ", classeSelecionada)
+      //console.log("01 length: ", classeSelecionada.length)
+    } else {
+      event.target.className = 'task';
+      //console.log("02: ", classeSelecionada)
+      //console.log("02 length: ", classeSelecionada.length)
+    }
+  })
+
+}
+alterarClase();
+
+//-----------------------------------------------------------
+//Parte 10
+
+//Implemente uma função que atribua a cor da tarefa ao dia do calendário.
+//Adicione um evento que, ao clicar em um dia do mês no calendário, atribua a esse dia a cor da legenda da sua tarefa selecionada.
+//Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119)
+
+function corTarefa() {
+  let tarefaSelecionada = document.getElementsByClassName('task selected');
+  let diasSelecionados = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+
+  diasSelecionados.addEventListener('click', function(event) {
+    let eventTargetColor = event.target.style.color;
+    if (tarefaSelecionada.length > 0 && eventTargetColor !== taskColor) {
+      let color = tarefaSelecionada[0].style.backgroundColor;// Pega a cor de fundo do primeiro elemento salvo na variável "selectedTask" e salva na variável "color"
+      event.target.style.color = color;// atribui a cor salva na variável "color" ao evento alvo
+    } else if (eventTargetColor === taskColor){
+      event.target.style.color = 'rgb(119,119,119)';// Altera a cor de fundo do evento alvo para "rgb(119, 119, 119)"
+    }
+  })  
+}
+corTarefa() 
+//-----------------------------------------------------------
+//Bônus
+
+//Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto “COMPROMISSOS”, adiciona o item à lista “MEUS COMPROMISSOS” ao clicar no botão “ADICIONAR”.
+//-Se nenhum caractere for inserido no campo input, a função deve retornar um alert com uma mensagem de erro ao clicar em “ADICIONAR”.
+//-Ao pressionar a tecla “enter” o evento também deverá ser disparado.
+//-Dica - Propriedade: key.
+
+function adicionaNovocompromisso() {
+  let texto = document.querySelector('#task-input');  
+  let getBtnAdicionar = document.querySelector('#btn-add');
+  let getMyListTasks = document.querySelector('.task-list');
+
+  getBtnAdicionar.addEventListener('click', function(){
+    if (texto.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = texto.value;      
+      
+      getMyListTasks.appendChild(newLi);
+      texto.value = '';
+    } else {
+      alert('Erro: Escreva seu novo compromisso!');
+    }
+  })
+  texto.addEventListener('keyup', function(event){
+    if (event.key === 'Enter' && texto.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = texto.value;        
+      
+      getMyListTasks.appendChild(newLi);
+      texto.value = '';
+    }
+  });
+}
+adicionaNovocompromisso();
+
+  
+  
+  
