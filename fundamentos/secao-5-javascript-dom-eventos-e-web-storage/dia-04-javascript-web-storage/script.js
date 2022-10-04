@@ -1,5 +1,5 @@
 window.onload = function () {
-
+  //<<<<<<<<<<<<<<<<FUNÇÕES>>>>>>>>>>>>>>>>
   function criaSectionContainerBtn() {
     let body = document.body;
     body.setAttribute('class', 'body');
@@ -7,7 +7,6 @@ window.onload = function () {
     sectionBtn.classList.add('btn-container');
     body.appendChild(sectionBtn);
   }
-  criaSectionContainerBtn();
 
   //-----------------------------------------------
   //Cria botões
@@ -34,8 +33,7 @@ window.onload = function () {
     btnSizeText.innerText = "Aumenta o Texto";
     btnEspLinhas.innerText = "Espaçamento";
     btnFontFamily.innerText = "Font Family";
-  }
-  criaBtnCorDeFundo();
+  };
 
   //.....................................................................
   //Cria o paragrafo
@@ -49,8 +47,7 @@ window.onload = function () {
     p.classList.add('paragrafo');
     sectionTexto.appendChild(p);
     p.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique beatae odio sunt eius eos aperiam, quod earum est natus eaque quibusdam, nemo qui fugit aspernatur architecto necessitatibus, labore facilis assumenda."
-  }
-  paragrafo()
+  };  
 
   //----------------------------------------------------------------------
   //Alterações
@@ -71,8 +68,7 @@ window.onload = function () {
         localStorage.setItem('keyCorLetra', JSON.stringify(corLetra));
       }
     });
-  }
-  alteraCorDeFundo();
+  };  
 
   function alteraCorDasLetras() {
 
@@ -92,8 +88,7 @@ window.onload = function () {
         console.log(cor);
       }
     });
-  }
-  alteraCorDasLetras();
+  };  
 
   function alteraTamanhoDasLetras() {
 
@@ -113,8 +108,7 @@ window.onload = function () {
         console.log(tamanho);
       }
     });
-  }
-  alteraTamanhoDasLetras();
+  };  
 
   function alteraEspacamento() {
 
@@ -132,8 +126,7 @@ window.onload = function () {
         localStorage.setItem('keyEspacamento', JSON.stringify(espacoLinhas));
       }
     });
-  }
-  alteraEspacamento();
+  };  
 
   function alteraFontFamily() {
 
@@ -151,7 +144,17 @@ window.onload = function () {
         localStorage.setItem('keyFontFamily', JSON.stringify(fonteFamilia));
       }
     });
-  }
+  };
+  
+  //........................................................................
+  //chama as funções
+  criaSectionContainerBtn();
+  criaBtnCorDeFundo();
+  paragrafo();
+  alteraCorDeFundo();
+  alteraCorDasLetras();
+  alteraTamanhoDasLetras();
+  alteraEspacamento();
   alteraFontFamily();
 
   //------------------------------------------------------------------------
