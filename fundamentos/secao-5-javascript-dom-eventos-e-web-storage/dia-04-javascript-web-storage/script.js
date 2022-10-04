@@ -21,16 +21,24 @@ function criaBtnCorDeFundo () {
   let btnCorFundo = document.createElement('button');
   let btnCorTexto = document.createElement('button');
   let btnSizeText = document.createElement('button');
+  let btnEspLinhas = document.createElement('button');
+  let btnFontFamily = document.createElement('button');
   btnCorFundo.setAttribute('id', 'btn-cor-fundo');
   btnCorTexto.setAttribute('id', 'btn-cor-texto');
   btnSizeText.setAttribute('id', 'btn-size-text');
+  btnEspLinhas.setAttribute('id', 'btn-esp-linhas');
+  btnFontFamily.setAttribute('id', 'btn-font-family');
   let sectionBtn = document.querySelector('.btn-container');
   sectionBtn.appendChild(btnCorFundo);
   sectionBtn.appendChild(btnCorTexto);
   sectionBtn.appendChild(btnSizeText);
+  sectionBtn.appendChild(btnEspLinhas);
+  sectionBtn.appendChild(btnFontFamily);
   btnCorFundo.innerText = "Cor de fundo";
   btnCorTexto.innerText = "Cor do Texto";
   btnSizeText.innerText = "Aumenta o Texto";
+  btnEspLinhas.innerText = "Espaçamento";
+  btnFontFamily.innerText = "Font Family";
 }
 criaBtnCorDeFundo();
 
@@ -112,17 +120,47 @@ function alteraTamanhoDasLetras () {
       localStorage.setItem('keySize', JSON.stringify(tamanho));
       console.log(tamanho);
     }      
-  });
-  
+  });  
 }
 alteraTamanhoDasLetras ();
-/*
-let p = document.querySelector('p');
-p.style.fontSize = '50px';
 
-*/
+function alteraEspacamento () {
 
+  let btnEspLinhas = document.querySelector('#btn-esp-linhas');
 
+  btnEspLinhas.addEventListener('click', function() {
+    let p = document.querySelector('p');
+    if (p.style.lineHeight === '1.2') {
+      p.style.lineHeight = '3';      
+      let espacoLinhas =  p.style.lineHeight;
+      localStorage.setItem('keyEspacamento', JSON.stringify(espacoLinhas));
+    } else {
+      p.style.lineHeight = '1.2';      
+      let espacoLinhas =  p.style.lineHeight;
+      localStorage.setItem('keyEspacamento', JSON.stringify(espacoLinhas));
+    }      
+  });  
+}
+alteraEspacamento ();
+
+function alteraFontFamily () {
+
+  let btnFontFamily = document.querySelector('#btn-font-family');
+
+  btnFontFamily.addEventListener('click', function() {
+    let p = document.querySelector('p');
+    if (p.style.fontFamily === 'serif') {
+      p.style.fontFamily = 'Arial';    
+      let fonteFamilia =  p.style.fontFamily;
+      localStorage.setItem('keyFontFamily', JSON.stringify(fonteFamilia));
+    } else {
+      p.style.fontFamily = 'serif';    
+      let fonteFamilia =  p.style.fontFamily;
+      localStorage.setItem('keyFontFamily', JSON.stringify(fonteFamilia));
+    }      
+  });  
+}
+alteraFontFamily ();
 
 
 
@@ -134,12 +172,17 @@ function resgateLocalStorage() {
   document.body.style.backgroundColor = corFundo;
   
   let corDaLetra = JSON.parse(localStorage.getItem('keyCorLetra'));
-  let p =document.querySelector('.paragrafo');
+  let p = document.querySelector('.paragrafo');
   p.style.color = corDaLetra;
   
   let tamanhoLetra = JSON.parse(localStorage.getItem('keySize'));
   p.style.fontSize = tamanhoLetra;
 
+  let tamanhoEspacamento = JSON.parse(localStorage.getItem('keyEspacamento'));
+  p.style.lineHeight = tamanhoEspacamento;
+
+  let familiaFonte = JSON.parse(localStorage.getItem('keyFontFamily'));
+  p.style.fontFamily = familiaFonte;
 }
 resgateLocalStorage();
 
