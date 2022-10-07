@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(143, 216, 173);
+  font-family: monospace;
+}
+h1 {
+  text-align: center;
+}
+.formulario {
+  margin: auto;
+  border: 2px solid red;
+  width: 350px;
+  padding: 2%;
+  background-color: aquamarine;
+}
