@@ -12,3 +12,13 @@ h1 {
   padding: 2%;
   background-color: aquamarine;
 }
+
+.buttons {
+  background-color: bisque;
+  padding: 3%;
+  width: 121px;
+}
+
+#button-enviar, #button-apagar{
+  border-radius: 15%;
+}
