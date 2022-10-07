@@ -10,45 +10,44 @@
   <header>
     <h1>Formulário TrybeTrip</h1>
   </header>
-  <form>
-    <section>
+  <form action="" method="get" class="formulario">
+    <section class="form-container">
       <label for="full-name">
-        Nome completo: <input type="text" name="" id="full-name" minlength="10" maxlength="40">
+        Nome completo: <input type="text" name="fullName" id="full-name" minlength="10" maxlength="40">
       </label>
       <br>
       <label for="email">
-        E-mail: <input type="email" name="" id="email" minlength="10" maxlength="50">
+        E-mail: <input type="email" name="email" id="email" minlength="10" maxlength="50">
       </label>
       <br>
       <h2>Destino Preferido</h2>
-      <input type="radio" name="destino" id="cidade" value="cidade"> Cidade
-      <input type="radio" name="destino" id="campo" value="campo"> Campo
-      <input type="radio" name="destino" id="praia" value="praia"> Praia
-      <input type="radio" name="destino" id="montanhas" value="montanhas"> Montanhas
+      <input type="radio" name="destino" id="cidade" value="cidade"><label for="cidade">Cidade</label>
+      <input type="radio" name="destino" id="campo" value="campo"><label for="campo">Campo</label>
+      <input type="radio" name="destino" id="praia" value="praia"><label for="praia">Praia</label> 
+      <input type="radio" name="destino" id="montanhas" value="montanhas"><label for="montanhas">Montanhas</label> 
       <br>
-      <h2>Destino Preferido</h2>
-      Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+      <label for="text-area">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>      
         <br>
-        <textarea name="" id="text-area" cols="30" rows="10" maxlength="500"></textarea>
+        <textarea name="textarea" id="text-area" cols="30" rows="10" maxlength="500"></textarea>
       
       <br>
-      <label for="data">Data: </label>
-      <input type="date" name="" id="data">
+      <label for="data">Qual a melhor data para realizar sua viagem? </label>
+      <input type="date" name="data" id="data">
       <br>
-      <label for="consordo1">Concordo 1
-        <input type="checkbox" name="" id="concordo1">
+      <label for="concordo-oportunidades">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+        <input type="checkbox" name="concordoOportunidades" id="concordo-oportunidades">
       </label>
       <br>
-      <label for="consordo1">Concordo 2
-        <input type="checkbox" name="" id="concordo2">
+      <label for="consordo">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+        <input type="checkbox" name="concordoTermos" id="concordo" required>
       </label>
     </section>
     <section>
-      <input type="button" value="Enviar">
-      <input type="button" value="Apagar">
+      <button type="submit" id="button-enviar">Enviar</button>
+      <button type="reset" id="button-apagar">Apagar</button>
     </section>
     
   </form>
-  <script src=""></script>
+  <script src="./script.js"></script>
 </body>
 </html>
