@@ -29,3 +29,16 @@ function validacao() {
     alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.')
   }
 }
+
+
+///PickDay
+
+// var field = document.getElementById('datepicker');
+// var picker = new Pikaday({
+//     onSelect: function(date) {
+//         field.value = picker.toString();
+//     }
+// });
+// field.parentNode.insertBefore(picker.el, field.nextSibling);
+const getMoment = document.getElementById('moment');
+console.log(getMoment);
