@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <title>Formulário TrybeTrip</title>
 </head>
 
@@ -22,12 +23,11 @@
     <section class="container mb-3">
       <br>
       <label for="full-name" class="form-label">Nome:</label>
-      <input type="text" name="fullName" placeholder="Digite seu nome completo" id="full-name" minlength="10"
-        maxlength="40" required class="form-control mb-3">
+      <input type="text" name="fullName" placeholder="Digite seu nome completo" id="full-name"
+        class="form-control mb-3">
 
       <label for="email" class="form-label">E-mail:</label>
-      <input type="email" name="email" placeholder="Digite seu e-mail" id="email" minlength="10" maxlength="50" required
-        class="form-control mb-3">
+      <input type="email" name="email" placeholder="Digite seu e-mail" id="email" class="form-control mb-3">
 
       <h3 class="display-6 mb-3">Destino Preferido</h3>
       <div class="form-check form-check-inline mb-4">
@@ -56,6 +56,10 @@
 
 
 
+
+
+
+
       <!-- <label for="data" class="form-label">Qual a melhor data para realizar sua viagem? </label>
       <input type="date" name="data" id="data" class="form-control mb-3"> -->
 
@@ -79,23 +83,45 @@
       <button type="submit" id="button-enviar" class="btn btn-primary mb-3">Enviar</button>
       <button type="reset" id="button-apagar" class="btn btn-warning mb-3">Apagar</button>
     </section>
-   
-    
+
+
     <!-- <script src="pikaday.js"></script>
     <script>
       var picker = new Pikaday({ field: document.getElementById('datepicker') });
     </script> -->
   </form>
-  <script id = "moment" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-  <script src="./script.js"></script>
-  <script>
-    // var picker = new Pikaday({
-    //     field: document.getElementById('datepicker'),
-    //     format: 'D MMM YYYY',
-    //     onSelect: function() {
-    //         console.log(this.getMoment().format('Do MMMM YYYY'));
-    //     }
-    // });
+  <script src="./script.js" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js">
+    const validation = new JustValidate('#form');
+
+    validation
+      .addField('#name', [
+        {
+          rule: 'minLength',
+          value: 10,
+        },
+        {
+          rule: 'maxLength',
+          value: 40,
+        },
+      ])
+      .addField('#email', [
+        {
+          rule: 'required',
+          errorMessage: 'Email is required',
+        },
+        {
+          rule: 'email',
+          errorMessage: 'Email is invalid!',
+        },
+      ]);
+
+    var picker = new Pikaday({
+      field: document.getElementById('datepicker'),
+      format: 'D MMM YYYY',
+      onSelect: function () {
+        console.log(this.getMoment().format('Do MMMM YYYY'));
+      }
+    });
   </script>
 </body>
 

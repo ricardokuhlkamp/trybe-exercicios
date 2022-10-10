@@ -1,4 +1,7 @@
 window.onload = function () {
+  
+
+
   const agree = document.getElementById('concordo');
   const buttonEnviar = document.getElementById('button-enviar');
 
@@ -19,16 +22,18 @@ function enableSubmit() {
   }
 }
 
-function validacao() {
-  let getName = document.getElementById('full-name').value;
-  let getEmail = document.getElementById('email').value;
+
+
+
+  // let getName = document.getElementById('full-name').value;
+  // let getEmail = document.getElementById('email').value;
   
-  if ((getName.length < 10 || getName.length > 40) || (getEmail.length < 10 || getEmail.length > 50)) {
-    alert('Dados Inválidos')
-  } else {
-    alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.')
-  }
-}
+  // if ((getName.length < 10 || getName.length > 40) || (getEmail.length < 10 || getEmail.length > 50)) {
+  //   alert('Dados Inválidos')
+  // } else {
+  //   alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.')
+  // }
+//}
 
 
 ///PickDay
@@ -40,5 +45,36 @@ function validacao() {
 //     }
 // });
 // field.parentNode.insertBefore(picker.el, field.nextSibling);
-const getMoment = document.getElementById('moment');
-console.log(getMoment);
+
+const validation = new JustValidate('#form');
+
+    validation
+      .addField('#name', [
+        {
+          rule: 'minLength',
+          value: 10,
+        },
+        {
+          rule: 'maxLength',
+          value: 40,
+        },
+      ])
+      .addField('#email', [
+        {
+          rule: 'required',
+          errorMessage: 'Email is required',
+        },
+        {
+          rule: 'email',
+          errorMessage: 'Email is invalid!',
+        },
+      ]);
+
+    var picker = new Pikaday({
+      field: document.getElementById('datepicker'),
+      format: 'D MMM YYYY',
+      onSelect: function () {
+        console.log(this.getMoment().format('Do MMMM YYYY'));
+      }
+    });
+
