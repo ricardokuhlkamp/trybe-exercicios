@@ -15,7 +15,10 @@ body {
   flex-flow: row-reverse;
   justify-content: flex-end;
   
+  
 }
+
+
 
 .logo-container {
   display: flex;
@@ -27,13 +30,13 @@ body {
   display: flex;
   width: 500px;
   align-self: center;
-  
+  flex-grow: 1;  
 }
 
 .menu-container ul {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 100%;  
   
 }
 
