@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@media screen and (max-width: 414px) {
+  body { 
+    margin: 0;
+  }
+  header p {
+    text-align: center;
+  }
+  nav ul {
+    display: flex;
+    flex: row;
+    justify-content: space-evenly;
+    margin: 0;
+    padding-left: 0;
+  }
+  nav ul li {    
+    list-style: none;
+  }
+  aside h2 {
+    font-size: 15px;
+    text-align: center;
+  }
+  .aside-one ul{
+    padding: 10px;
+    font-size: 11px;
+    columns: 2;
+    list-style: none;
+    text-align:left
+  }
+
+  .aside-one ul li{
+    font-size: 11px;
+  }
+
+  .aside-two ul {
+    padding: 10px;
+    font-size: 11px;
+    columns: 2;
+    list-style: none;
+    text-align:left
+  }
+  .main-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+  .main-content h1 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .main-content p {
+    font-size: 11px;
+    text-align: justify;
+  }
+  footer h3{
+    font-size: 13px;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 11px;
+    text-align: justify;
+  }
+}
+
