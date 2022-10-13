@@ -6,6 +6,88 @@ html {
   box-sizing: inherit;
 }
 
+@media (min-width: 769px) {
+  body { 
+    margin: 0;
+  }
+  header p {
+    text-align: center;
+    font-size: xxx-large;
+  }
+  header nav ul {
+    display: flex;
+    flex: row;
+    justify-content: center;
+    margin: 0;
+    padding-left: 0;
+  }
+  header nav  ul li {    
+    list-style: none;
+    padding-left: 20px;
+    font-size: 30px;
+  }
+
+  .aside-one {
+    display: inline-block;
+  }
+  .aside-one h2 {    
+    font-size: 45px;
+    text-align: justify;
+    padding-left: 40px;
+  }
+  .aside-one ul{    
+    font-size: 35px;    
+    list-style: none;
+    text-align: justify;    
+  }
+
+  .aside-two {
+    display: inline-block;
+  }
+
+  .aside-two h2 {
+    font-size: 45px;
+    text-align: justify;
+    padding-left: 40px;
+  }
+
+  .aside-two ul{    
+    font-size: 35px;    
+    list-style: none;
+    text-align: justify;   
+  }
+
+  .main-content {
+    padding-left: 40px;
+    padding-right: 40px;
+    
+  }
+
+  .main-content h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .main-content p {
+    font-size: 20px;
+    text-align: justify;
+    column-width: 400px;
+  }
+
+  footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  footer h3{
+    font-size: 18px;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 14px;
+    text-align: justify;
+  }
+}
 
 @media (max-width: 768px) {
   body { 
