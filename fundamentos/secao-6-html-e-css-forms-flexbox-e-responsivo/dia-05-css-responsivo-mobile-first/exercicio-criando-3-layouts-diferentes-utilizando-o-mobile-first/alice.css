@@ -6,6 +6,78 @@ html {
   box-sizing: inherit;
 }
 
+
+@media (max-width: 768px) {
+  body { 
+    margin: 0;
+  }
+  header p {
+    text-align: center;
+  }
+  header nav ul {
+    display: flex;
+    flex: row;
+    justify-content: space-evenly;
+    margin: 0;
+    padding-left: 0;
+  }
+  ul li {    
+    list-style: none;
+  }
+  .aside-one h2 {
+    font-size: 22px;
+    text-align: justify;
+    padding-left: 40px;
+  }
+  .aside-one ul{    
+    font-size: 16px;    
+    list-style: none;
+    text-align: justify;    
+  }
+
+  .aside-two h2 {
+    font-size: 22px;
+    text-align: justify;
+    padding-left: 40px;
+  }
+
+  .aside-twoul{    
+    font-size: 16px;    
+    list-style: none;
+    text-align: justify;    
+  }
+
+  .main-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .main-content h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .main-content p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  footer h3{
+    font-size: 18px;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 14px;
+    text-align: justify;
+  }
+}
+
+
 @media screen and (max-width: 414px) {
   body { 
     margin: 0;
@@ -71,4 +143,3 @@ html {
     text-align: justify;
   }
 }
-
