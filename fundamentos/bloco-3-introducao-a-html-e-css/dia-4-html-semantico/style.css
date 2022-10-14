@@ -1,4 +1,4 @@
-body {
+/* body {
   
   background-color: caf0f8ec;
 }
@@ -65,4 +65,105 @@ nav {
 footer {
   background-color: lightgray;
   height:100px; 
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #52b69a;
+}
+
+#header h1 {
+  margin-bottom: 0;
+}
+
+#lista-navegacao {
+  background-color: #52b69a;
+  margin-bottom: 0;
+  padding: 16px;  
+}
+
+p {
+  text-align: justify;
+ 
+}
+
+.imagens {
+  width: 100%;
+}
+
+#lista-navegacao, #lista-referencia {
+  display: flex;
+  flex: row;
+  list-style: none;
+}
+#lista-navegacao li a {
+  text-decoration: none;
+  color: black;
+}
+
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+table, th, td {
+  border:1px solid black;
+  padding: 5px;
+}
+footer {
+  margin: 0;
+  background-color: #1a759f;
+  color: white;
+  padding: 10px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+#section-referencia {
+ padding: 15px;
+ margin-bottom: 15px;
+}
+#section-referencia, #section-referencia h3, #lista-referencia a, #lista-referencia li, #lista-referencia, #contato {
+  background-color: #1a759f;
+  color: white;
+}
+#contato {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 575px) {
+  
+  #lista-navegacao, #lista-referencia {
+    display: flexx;
+    justify-content: center;   
+  }
+  #lista-navegacao li, #lista-referencia li{
+    margin-right: 5%;   
+  }
+
+
+  #div-tabela {
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #section-refrencia {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  .container-info-gerais p {
+    font-size: 0.8rem;
+  }
+  .container-paragrafos p{
+    font-size: 0.8rem;
+  }
+  #aside p {
+    font-size:0.8rem;
+  }
+
 }
