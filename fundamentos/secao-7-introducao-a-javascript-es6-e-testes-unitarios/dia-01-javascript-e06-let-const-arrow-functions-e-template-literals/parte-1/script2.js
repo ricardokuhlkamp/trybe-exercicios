@@ -25,4 +25,4 @@ const sortOddsAndEvens = (array) => {
   return array;
 }
 
-console.log(sortOddsAndEvens(oddsAndEvens));
+console.log(`Os números ${sortOddsAndEvens(oddsAndEvens)} se encontram ordenados de forma crescente!`);
