@@ -18,15 +18,15 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const func = (object, turno, value) => object[turno]= value;
-func(lesson2, 'turno', 'noite')
-console.log(lesson2);
+// const func = (object, turno, value) => object[turno]= value;
+// func(lesson2, 'turno', 'noite')
+// console.log(lesson2);
 
-const chaves = (objeto) => Object.keys(objeto);
-console.log(chaves(lesson1));
+// const chaves = (objeto) => Object.keys(objeto);
+// console.log(chaves(lesson1));
 
-const count = objeto => Object.keys(objeto).length;
-console.log(count(lesson2));
+// const count = objeto => Object.keys(objeto).length;
+// console.log(count(lesson2));
 
 const values = objeto => Object.values(objeto);
 console.log(values(lesson2));
