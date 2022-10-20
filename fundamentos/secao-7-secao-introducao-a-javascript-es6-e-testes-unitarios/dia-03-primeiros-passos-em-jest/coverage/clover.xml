@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1666225032001" clover="3.2.0">
-  <project timestamp="1666225032002" name="All files">
-    <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1" elements="9" coveredelements="9" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
-    <file name="exercicio-01.js" path="/home/ricardo/Documentos/trybe/trybe-exercicios/fundamentos/secao-7-secao-introducao-a-javascript-es6-e-testes-unitarios/dia-03-primeiros-passos-em-jest/exercicio-01.js">
+<coverage generated="1666281103320" clover="3.2.0">
+  <project timestamp="1666281103320" name="All files">
+    <metrics statements="30" coveredstatements="25" conditionals="20" coveredconditionals="18" methods="9" coveredmethods="6" elements="59" coveredelements="49" complexity="0" loc="30" ncloc="30" packages="1" files="4" classes="4"/>
+    <file name="exercicio2.js" path="/home/ricardo/Documentos/trybe/trybe-exercicios/fundamentos/secao-7-secao-introducao-a-javascript-es6-e-testes-unitarios/dia-03-primeiros-passos-em-jest/exercicio2.js">
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="2" count="4" type="stmt"/>
+      <line num="3" count="4" type="stmt"/>
+      <line num="4" count="16" type="cond" truecount="2" falsecount="0"/>
+      <line num="5" count="13" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+    </file>
+    <file name="exercicio3.js" path="/home/ricardo/Documentos/trybe/trybe-exercicios/fundamentos/secao-7-secao-introducao-a-javascript-es6-e-testes-unitarios/dia-03-primeiros-passos-em-jest/exercicio3.js">
+      <metrics statements="6" coveredstatements="6" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <line num="2" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="3" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="4" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="5" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+    </file>
+    <file name="exercicio4.js" path="/home/ricardo/Documentos/trybe/trybe-exercicios/fundamentos/secao-7-secao-introducao-a-javascript-es6-e-testes-unitarios/dia-03-primeiros-passos-em-jest/exercicio4.js">
+      <metrics statements="13" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+    </file>
+    <file name="sum.js" path="/home/ricardo/Documentos/trybe/trybe-exercicios/fundamentos/secao-7-secao-introducao-a-javascript-es6-e-testes-unitarios/dia-03-primeiros-passos-em-jest/sum.js">
       <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <line num="2" count="4" type="cond" truecount="4" falsecount="0"/>
       <line num="3" count="2" type="stmt"/>
