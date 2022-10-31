@@ -35,6 +35,7 @@ const people = [
 // escreva filterPeople abaixo
 
 const filterPeople = (people) => people.
-  filter(({bornIn, nationality})=> nationality === 'Australian' && bornIn > 1900 && bornIn < 2000);
+  filter(({bornIn, nationality})=> nationality === 'Australian' && bornIn > 1900 && bornIn <= 2000).
+  map(({name}) => name);
 
-console.log(filterPeople(people))
+console.log(filterPeople(people));
